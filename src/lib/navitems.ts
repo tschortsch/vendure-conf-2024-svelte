@@ -17,5 +17,5 @@ export const navItems: NavItem[] = [
 	{ label: '11 CSS Transition', route: '/11-css-transitions' },
 	{ label: '12 Motion & Tweening', route: '/12-motion-and-tweening' },
 	{ label: '13 Runes', route: '/13-runes' },
-	{ label: '14 Web Components', route: '/14-webcomponents' },
+	{ label: '14 Web Components', route: '/14-web-components' },
 ];
