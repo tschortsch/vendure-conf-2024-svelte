@@ -1,8 +1,10 @@
 <script lang="ts">
 	let filter = $state('none');
+	let transitionDuration = $state('0s');
 	let liiperImgSrc = $state('/bestliiper-placeholder.png');
 
 	const getBestLiiper = async () => {
+		transitionDuration = '2s';
 		filter = 'blur(20px)';
 		setTimeout(async () => {
 			const res = await fetch('/06-api-routes/the-best-liiper-ai');
@@ -25,7 +27,7 @@
 
 <button onclick={getBestLiiper}>The BEST Liiper AI&trade;</button>
 
-<div style="--filter: {filter}">
+<div style="--filter: {filter}; --transition-duration: {transitionDuration};">
 	<img src={liiperImgSrc} alt="The BEST Liiper&trade;" class="the-best-liiper blur" />
 </div>
 
@@ -36,6 +38,6 @@
 	}
 	.blur {
 		filter: var(--filter);
-		transition: 2s filter ease-in-out;
+		transition: var(--transition-duration) filter ease-in-out;
 	}
 </style>
