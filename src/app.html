@@ -1,0 +1,33 @@
+<!doctype html>
+<html lang="en">
+	<head>
+		<meta charset="utf-8" />
+		<link rel="icon" href="%sveltekit.assets%/favicon.svg" />
+		<meta name="viewport" content="width=device-width, initial-scale=1" />
+		<link rel="icon" href="/favicon.svg" />
+		<link rel="preconnect" href="https://fonts.googleapis.com" />
+		<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin="crossorigin" />
+		<link
+			rel="stylesheet"
+			href="https://fonts.googleapis.com/css2?family=Archivo:ital,wght@0,100;0,400;0,700;0,900;1,400&amp;display=swap"
+		/>
+		<meta name="robots" content="noindex, nofollow" />
+		<script id="check-dark-mode">
+			(() => {
+				const e = localStorage.getItem('vitepress-theme-appearance') || 'dark',
+					a = window.matchMedia('(prefers-color-scheme: dark)').matches;
+				(!e || e === 'auto' ? a : e === 'dark') && document.documentElement.classList.add('dark');
+			})();
+		</script>
+		<script id="check-mac-os">
+			document.documentElement.classList.toggle(
+				'mac',
+				/Mac|iPhone|iPod|iPad/i.test(navigator.platform)
+			);
+		</script>
+		%sveltekit.head%
+	</head>
+	<body data-sveltekit-preload-data="hover">
+		<div style="display: contents">%sveltekit.body%</div>
+	</body>
+</html>
