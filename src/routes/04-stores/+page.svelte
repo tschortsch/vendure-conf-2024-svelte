@@ -14,7 +14,7 @@
 		Simple counter store value: <strong>{$counter}</strong>
 	</p>
 
-	<button on:click={() => counter.update((value) => value + 1)}>+</button>
+	<button onclick={() => counter.update((value) => value + 1)}>+</button>
 </section>
 
 <h2>Advanced</h2>
@@ -23,8 +23,8 @@
 		Hit counter: <strong>{$hitCounter}</strong>
 	</p>
 
-	<button on:click={() => hitCounter.increase()}>+</button>
-	<button on:click={() => hitCounter.decrease()}>-</button>
-	<button on:click={() => hitCounter.random()}>Set random number</button>
-	<button on:click={() => hitCounter.reset()}>Reset hit counter</button>
+	<button onclick={() => hitCounter.increase()}>+</button>
+	<button onclick={() => hitCounter.decrease()}>-</button>
+	<button onclick={() => hitCounter.random()}>Set random number</button>
+	<button onclick={() => hitCounter.reset()}>Reset hit counter</button>
 </section>

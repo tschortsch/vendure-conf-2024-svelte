@@ -5,7 +5,7 @@
 	import { App } from './App.tsx';
 	import { createRoot } from 'react-dom/client';
 
-	let count = 0;
+	let count = $state(0);
 
 	let app: HTMLDivElement;
 	let canvas: HTMLCanvasElement;
@@ -97,7 +97,7 @@
 
 <h2>Or a Canvas Element?</h2>
 <button
-	on:click={() => {
+	onclick={() => {
 		if (stopDrawing) {
 			stopDrawing();
 		}

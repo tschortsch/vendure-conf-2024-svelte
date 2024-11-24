@@ -1,7 +1,5 @@
 <script lang="ts">
-	import type { PageData } from "./$types";
-
-	export let data: PageData;
+	let { data } = $props();
 </script>
 
 <h1 class="title-with-emoji"><span class="emoji">🛰️</span>02 Data Fetching</h1>

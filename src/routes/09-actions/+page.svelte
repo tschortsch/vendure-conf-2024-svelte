@@ -22,6 +22,6 @@
 		border: 1px gray solid;
 	}
 	:global(.on) {
-		background-color: var(--vp-c-purple-1);
+		background-color: var(--vp-c-brand-1);
 	}
 </style>

@@ -10,11 +10,13 @@
 		{ name: 'Spring', fn: spring(0, { stiffness: 0.2, damping: 0.2 }) },
 	];
 
-	let tween = tweens[0].fn;
+	let tween = $state(tweens[0].fn);
+	let counter = $state(0);
 
-	let counter = 0;
-	$: $tween = counter;
-	$: fixed = $tween.toFixed(2);
+	$effect(() => {
+		$tween = counter;
+	});
+	const fixed = $derived($tween.toFixed(2));
 
 	// 2d
 	let coords = spring(
@@ -30,7 +32,9 @@
 	<span class="emoji">🎥</span>
 	12 Motion & Tweening
 </h1>
+
 <h2>(inbe)Tweening is linear interpolating two values</h2>
+
 <div class="container">
 	<progress class="progress" max={5} value={$tween}></progress>
 	<span>{fixed}</span>
@@ -42,8 +46,8 @@
 		{/each}
 	</select>
 
-	<button on:click={() => counter--}>less</button>
-	<button on:click={() => counter++}>more</button>
+	<button onclick={() => counter--} disabled={counter <= 0}>less</button>
+	<button onclick={() => counter++} disabled={counter >= 5}>more</button>
 </div>
 
 <h2>Tweened Stores Accept Points {'{ x, y }'}</h2>
@@ -52,7 +56,7 @@
 	role="img"
 	width="640"
 	height="480"
-	on:mousemove={(e) => {
+	onmousemove={(e) => {
 		const rect = (e.target as HTMLElement).getBoundingClientRect();
 		const x = e.clientX - rect.left;
 		const y = e.clientY - rect.top;
@@ -62,6 +66,7 @@
 >
 	<circle cx={$coords.x} cy={$coords.y} r={10} />
 </svg>
+
 {JSON.stringify($coords)}
 
 <style>

@@ -1,6 +1,6 @@
 <script lang="ts">
-	let filter = 'none';
-	let liiperImgSrc = '/bestliiper-placeholder.png';
+	let filter = $state('none');
+	let liiperImgSrc = $state('/bestliiper-placeholder.png');
 
 	const getBestLiiper = async () => {
 		filter = 'blur(20px)';
@@ -23,7 +23,7 @@
 	</a>
 </p>
 
-<button on:click={getBestLiiper}>The BEST Liiper AI&trade;</button>
+<button onclick={getBestLiiper}>The BEST Liiper AI&trade;</button>
 
 <div style="--filter: {filter}">
 	<img src={liiperImgSrc} alt="The BEST Liiper&trade;" class="the-best-liiper blur" />

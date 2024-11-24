@@ -1,5 +1,5 @@
 export const load = async ({ url }) => {
-	// url is URL
+	// url is an URL object
 	return {
 		origin: url.origin,
 	};

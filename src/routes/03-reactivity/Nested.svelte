@@ -1,7 +1,8 @@
 <script lang="ts">
-	export let counter: number;
+	type Props = { counter: number };
+	let { counter = $bindable() }: Props = $props();
 
-	$: double = counter * 2;
+	const double = $derived(counter * 2);
 
 	const increment = () => {
 		counter = counter + 1;
@@ -16,4 +17,4 @@
 
 <p>Nested double 🧀: {double}</p>
 
-<button on:click={increment}>Increment from nested component</button>
+<button onclick={increment}>Increment from nested component</button>

@@ -1,11 +1,12 @@
 <script lang="ts">
 	import { fade } from 'svelte/transition';
-	import { linear } from 'svelte/easing';
-	let show = false;
+
+	let show = $state(false);
 
 	const customEasing = (t: number) => t * t;
 
-	function cool(node: Element) {
+	// eslint-disable-next-line @typescript-eslint/no-unused-vars
+	function myCoolTransition(node: Element) {
 		return {
 			delay: 0,
 			duration: 1000,
@@ -19,9 +20,10 @@
 	<span class="emoji">🔄</span>
 	11 CSS Transition
 </h1>
-<button on:click={() => (show = !show)}>{show ? 'Hide' : 'Show'}</button>
+<button onclick={() => (show = !show)}>{show ? 'Hide' : 'Show'}</button>
 {#if show}
-	<div class="content" transition:cool>Hello</div>
+	<div class="content" transition:fade>Faded</div>
+	<div class="content" transition:myCoolTransition>Look ma, my own transition!</div>
 {/if}
 
 <style>

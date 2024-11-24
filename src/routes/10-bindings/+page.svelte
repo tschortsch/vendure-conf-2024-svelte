@@ -3,9 +3,9 @@
 	import { quadOut } from 'svelte/easing';
 	import { fade } from 'svelte/transition';
 
-	let items = [] as string[];
-	let on = false;
-	let height = 0;
+	let items = $state([] as string[]);
+	let on = $state(false);
+	let height = $state(0);
 </script>
 
 <h1 class="title-with-emoji">
@@ -13,7 +13,7 @@
 	10 Bindings
 </h1>
 <div>
-	<button class:on on:click={() => (on = !on)}>{on ? 'on' : 'off'}</button>
+	<button class:on onclick={() => (on = !on)}>{on ? 'on' : 'off'}</button>
 	<strong class="ml-4">bind:clientHeight</strong>
 </div>
 
@@ -26,14 +26,14 @@
 				animate:flip={{ duration: 300, easing: quadOut }}
 				class="item"
 			>
-				<button on:click={() => (items = items.filter((i) => i !== item))}>x</button>
+				<button onclick={() => (items = items.filter((i) => i !== item))}>x</button>
 				{item}
 			</div>
 		{/each}
 	</div>
 </div>
 
-<button class="mt-4" on:click={() => (items = [...items, crypto.randomUUID()])}>more</button>
+<button class="mt-4" onclick={() => (items = [...items, crypto.randomUUID()])}>more</button>
 
 <style>
 	.container {
