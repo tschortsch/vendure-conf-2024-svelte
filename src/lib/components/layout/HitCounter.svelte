@@ -20,8 +20,7 @@
 		padding: 6px 6px 4px;
         min-width: 25px;
 		border-radius: 3px;
-		background: linear-gradient(180deg, rgba(176,235,0,1) 0%, rgba(186,244,136,1) 50%, rgba(54,235,0,1) 100%);
-		border: 2px solid darkgoldenrod;
+		background: linear-gradient(180deg, #0f84af 0%, #2cc5fc 50%, #008ece 100%);
 	}
 	.center {
         display: flex;

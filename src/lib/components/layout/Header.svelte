@@ -5,12 +5,12 @@
 				<div class="title" data-v-ccf7ddec="">
 					<div class="VPNavBarTitle has-sidebar" data-v-ccf7ddec="" data-v-ab179fa1="">
 						<a class="title" href="/" data-v-ab179fa1="">
-							<span class="flex items-end"><!--[--><!--]--><!--[--><!--[--><!--[-->
+							<span class="flex items-center"><!--[--><!--]--><!--[--><!--[--><!--[-->
 								<img class="VPImage dark logo" src="/vendure-wordmark-primary.svg" alt="" data-v-8426fc1a="" />
 								<!--]--><!--[-->
 								<img class="VPImage light logo" src="/vendure-wordmark-primary.svg" alt="" data-v-8426fc1a="" />
 								<!--]--><!--]--><!--]-->
-								<span data-v-ab179fa1="">Conf 2024</span>
+								<span data-v-ab179fa1="" class="mt-2">Conf 2024</span>
 								<!--[--><!--]--></span>
 						</a>
 					</div>

@@ -3,5 +3,5 @@
 <ul>
 	<li><a href="/01-routing/de/my-product">Existing language: /01-routing/de/my-product</a></li>
 	<li><a href="/01-routing/en/my-product">Non existing language: /01-routing/en/my-product</a></li>
-	<li><a href="https://liip.ch">External link</a></li>
+	<li><a href="https://vendure.io">External link</a></li>
 </ul>
