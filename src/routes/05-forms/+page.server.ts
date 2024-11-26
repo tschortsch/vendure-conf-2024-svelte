@@ -16,7 +16,7 @@ export const actions = {
 			database.todos.push(description);
 		}
 	},
-	reset: async () => {
+	clear: async () => {
 		database.todos = [];
 	},
 };

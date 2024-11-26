@@ -4,10 +4,11 @@ export const load: PageLoad = (event) => {
 	const { dataLoadedFromDb } = event.data;
 
 	// Do something with the server data
-	const dataFromPage = `[Page Data] User Id: ${dataLoadedFromDb.userId}`;
+	const splittedUserId = dataLoadedFromDb.userId.split('-');
 
 	// Pass data to +page.sevlte
 	return {
-		dataFromPage,
+		userId: dataLoadedFromDb.userId,
+		splittedUserId,
 	};
 };
