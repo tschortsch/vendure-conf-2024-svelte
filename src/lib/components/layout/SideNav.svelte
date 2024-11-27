@@ -1,10 +1,13 @@
-<script>
+<script lang="ts">
 	import { page } from '$app/stores';
 	import { navItems } from '$lib/navitems';
+	import { getNavBarOpenStore } from '$lib/stores/app';
 	import HitCounter from './HitCounter.svelte';
+
+	const navBarOpenStore = getNavBarOpenStore();
 </script>
 
-<aside data-v-575e6a36="" data-v-5d98c3a5="" class="VPSidebar">
+<aside data-v-575e6a36="" data-v-5d98c3a5="" class={`VPSidebar${$navBarOpenStore ? ' open' : ''}`}>
 	<div>
 		<div data-v-575e6a36="" class="curtain"></div>
 		<nav
@@ -25,7 +28,7 @@
 							>
 								<div data-v-b8d55f3b="" class="item">
 									<div data-v-b8d55f3b="" class="indicator"></div>
-									<a data-v-b8d55f3b="" class="VPLink link link" href={navItem.route}>
+									<a data-v-b8d55f3b="" class="VPLink link link" href={navItem.route} onclick={navBarOpenStore.close}>
 										<p data-v-b8d55f3b="" class="text">{navItem.label}</p>
 									</a>
 								</div>

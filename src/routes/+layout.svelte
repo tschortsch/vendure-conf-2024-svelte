@@ -1,9 +1,13 @@
 <script lang="ts">
 	import Header from '$lib/components/layout/Header.svelte';
 	import SideNav from '$lib/components/layout/SideNav.svelte';
+	import { getNavBarOpenStore } from '$lib/stores/app';
 	import '../app.css';
 
 	const { children } = $props();
+
+	// Initialize scoped stores
+	getNavBarOpenStore();
 </script>
 
 <div id="app">

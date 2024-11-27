@@ -4513,20 +4513,15 @@ svg.DocSearch-Hit-Select-Icon {
 }
 
 .VPNavBarSearch {
-    display: flex;
-    align-items: center
+    display: none;
+    align-items: center;
+    flex-grow: 1;
+    padding-left: 24px
 }
 
 @media (min-width: 768px) {
     .VPNavBarSearch {
-        flex-grow: 1;
-        padding-left: 24px
-    }
-}
-
-@media (min-width: 960px) {
-    .VPNavBarSearch {
-        padding-left: 32px
+        display: flex;
     }
 }
 
@@ -4645,6 +4640,7 @@ svg.DocSearch-Hit-Select-Icon {
 .container[data-v-ccf7ddec] {
     display: flex;
     justify-content: space-between;
+    align-items: center;
     margin: 0 auto;
     max-width: calc(var(--vp-layout-max-width) - 64px);
     height: var(--vp-nav-height);
@@ -4714,7 +4710,7 @@ svg.DocSearch-Hit-Select-Icon {
 
 .content-body[data-v-ccf7ddec] {
     display: flex;
-    justify-content: flex-end;
+    justify-content: flex-start;
     align-items: center;
     height: var(--vp-nav-height);
     transition: background-color .5s
@@ -5195,6 +5191,10 @@ svg.DocSearch-Hit-Select-Icon {
 }
 
 @media (min-width: 960px) {
+    .nav-toggle {
+        display: none;
+    }
+
     .VPSidebar[data-v-575e6a36] {
         padding-top: var(--vp-nav-height);
         width: var(--vp-sidebar-width);
