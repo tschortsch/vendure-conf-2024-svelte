@@ -1,5 +1,5 @@
 <div class="center">
-	<h1>Experience the magic behind Svelte/SvelteKit</h1>
+	<h1>Experience the Magic of Svelte/SvelteKit</h1>
 
 	<div class="images">
 		<span class="wizard">🧙🏻‍♂️</span>

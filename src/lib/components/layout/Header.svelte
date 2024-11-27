@@ -18,7 +18,7 @@
 				<div class="content" data-v-ccf7ddec="">
 					<div class="content-body" data-v-ccf7ddec="">
 						<div class="VPNavBarSearch search" data-v-ccf7ddec="">
-							The magic behind Svelte
+							The Magic of Svelte
 						</div>
 					</div>
 				</div>
