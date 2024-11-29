@@ -1,10 +1,10 @@
 <script lang="ts">
-	import { hitCounter, initialHitCounterValue } from '../../../routes/04-stores/hitcounter-store';
+	import { hitCounter } from '../../../routes/05-stores/hitcounter-store';
 
 	$: digits = $hitCounter.toString().split('').map(Number);
 </script>
 
-{#if $hitCounter > initialHitCounterValue}
+{#if $hitCounter > 1337}
 	<div class="center">
 		{#each digits as digit}
 			<span>{digit}</span>

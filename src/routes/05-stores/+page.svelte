@@ -5,7 +5,7 @@
 
 <h1 class="title-with-emoji">
 	<span class="emoji">💾</span>
-	04 Stores
+	05 Stores
 </h1>
 
 <h2>Simple</h2>
@@ -25,6 +25,5 @@
 
 	<button onclick={() => hitCounter.increase()}>+</button>
 	<button onclick={() => hitCounter.decrease()}>-</button>
-	<button onclick={() => hitCounter.random()}>Set random number</button>
 	<button onclick={() => hitCounter.reset()}>Reset hit counter</button>
 </section>

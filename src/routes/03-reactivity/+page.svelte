@@ -2,6 +2,10 @@
 	import type { SvelteComponent } from 'svelte';
 	import Nested from './Nested.svelte';
 
+	// Svelte 4
+	// let counter = 0;
+
+	// Svelte 5
 	let counter = $state(0);
 	let counterProp = $state(0);
 	let counterPropBind = $state(0);

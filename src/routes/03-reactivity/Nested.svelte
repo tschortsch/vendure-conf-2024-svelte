@@ -2,14 +2,15 @@
 	type Props = { counter: number };
 	let { counter = $bindable() }: Props = $props();
 
-	const double = $derived(counter * 2);
+	let double = $derived(counter * 2);
 
 	const increment = () => {
 		counter = counter + 1;
 	};
 
+	// Exposed child function
 	export const exportedIncrement = () => {
-		counter = counter + 1;
+		increment();
 	};
 </script>
 

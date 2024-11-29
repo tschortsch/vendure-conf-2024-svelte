@@ -6,7 +6,7 @@
 
 <h1 class="title-with-emoji">
 	<span class="emoji">📝</span>
-	05 Forms
+	04 Forms
 </h1>
 
 <h2>Basic Form</h2>
@@ -15,7 +15,7 @@
 		<form method="POST" action="?/create">
 			<label>
 				☝🏻 Don't forget to:
-				<input name="description" />
+				<input name="todo" />
 			</label>
 			<button type="submit">Add</button>
 		</form>
@@ -28,7 +28,9 @@
 	<ul class="!list-none !pl-0">
 		{#each data.todos as todo}
 			<li>
-				<span>✅<span class="pl-2">{todo}</span></span>
+				<label>
+					<input type="checkbox" /><span class="pl-2">{todo}</span>
+				</label>
 			</li>
 		{/each}
 	</ul>
@@ -40,7 +42,7 @@
 		<form method="POST" action="?/create" use:enhance>
 			<label>
 				☝🏻 Don't forget to:
-				<input name="description" />
+				<input name="todo" />
 			</label>
 			<button type="submit">Add</button>
 		</form>
@@ -53,7 +55,9 @@
 	<ul class="!list-none !pl-0">
 		{#each data.todos as todo}
 			<li>
-				<span>✅<span class="pl-2">{todo}</span></span>
+				<label>
+					<input type="checkbox" /><span class="pl-2">{todo}</span>
+				</label>
 			</li>
 		{/each}
 	</ul>
