@@ -17,7 +17,7 @@
 </script>
 
 <h1 class="title-with-emoji">
-	<span class="emoji">🔄</span>
+	<span class="emoji">🐛</span>
 	11 CSS Transition
 </h1>
 <button onclick={() => (show = !show)}>{show ? 'Hide' : 'Show'}</button>

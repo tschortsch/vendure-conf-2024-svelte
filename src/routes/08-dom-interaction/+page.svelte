@@ -7,7 +7,7 @@
 
 	let count = $state(0);
 
-	let app: HTMLDivElement;
+	let reactApp: HTMLDivElement;
 	let canvas: HTMLCanvasElement;
 
 	let stopDrawing: null | (() => void) = null;
@@ -17,15 +17,15 @@
 		jQuery('.button').on('click', () => count++);
 
 		// confetti library
-		let confetti = new Confetti('demo');
+		let confetti = new Confetti('confetti-demo');
 		confetti.destroyTarget(false);
 
 		// mount a react component
-		const root = createRoot(app);
-		root.render(App({ name: 'React Component' }));
+		const reactRoot = createRoot(reactApp);
+		reactRoot.render(App({ name: 'React Component' }));
 
 		return () => {
-			root.unmount();
+			reactRoot.unmount();
 		};
 	});
 
@@ -89,11 +89,11 @@
 
 <h2>Or some Confetti?</h2>
 <div>
-	<button id="demo">Bääm</button>
+	<button id="confetti-demo">Bääm</button>
 </div>
 
 <h2>Or React?</h2>
-<div bind:this={app}></div>
+<div bind:this={reactApp}></div>
 
 <h2>Or a Canvas Element?</h2>
 <button
@@ -105,9 +105,3 @@
 	}}>Do the Mandel</button
 >
 <canvas class="mt-2" width="512" height="512" bind:this={canvas}></canvas>
-
-<style>
-	.mt-2 {
-		margin-top: 2rem;
-	}
-</style>
