@@ -29,7 +29,8 @@
 		{#each data.todos as todo}
 			<li>
 				<label>
-					<input type="checkbox" /><span class="pl-2">{todo}</span>
+					<input type="checkbox" />
+					<span class="pl-2">{todo}</span>
 				</label>
 			</li>
 		{/each}
@@ -56,7 +57,8 @@
 		{#each data.todos as todo}
 			<li>
 				<label>
-					<input type="checkbox" /><span class="pl-2">{todo}</span>
+					<input type="checkbox" />
+					<span class="pl-2">{todo}</span>
 				</label>
 			</li>
 		{/each}

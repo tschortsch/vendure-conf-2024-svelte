@@ -1,4 +1,7 @@
-<h1 class="title-with-emoji"><span class="emoji">🗺️</span> 01 Routing</h1>
+<h1 class="title-with-emoji">
+	<span class="emoji">🗺️</span>
+	 01 Routing
+</h1>
 
 <ul>
 	<li><a href="/01-routing/de/my-product">Existing language: /01-routing/de/my-product</a></li>

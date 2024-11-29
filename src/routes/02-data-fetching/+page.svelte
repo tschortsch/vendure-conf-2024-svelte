@@ -2,7 +2,10 @@
 	let { data } = $props();
 </script>
 
-<h1 class="title-with-emoji"><span class="emoji">🛰️</span>02 Data Fetching</h1>
+<h1 class="title-with-emoji">
+	<span class="emoji">🎣</span>
+	02 Data Fetching
+</h1>
 
 <h2>User Id</h2>
 <p>{data.userId}</p>

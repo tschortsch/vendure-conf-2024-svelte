@@ -102,6 +102,8 @@
 			stopDrawing();
 		}
 		stopDrawing = mandelMe(canvas);
-	}}>Do the Mandel</button
+	}}
 >
+	Do the Mandel
+</button>
 <canvas class="mt-2" width="512" height="512" bind:this={canvas}></canvas>

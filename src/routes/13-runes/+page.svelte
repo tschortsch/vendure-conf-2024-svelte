@@ -39,15 +39,30 @@ The Value is {value}
 
 <h3>SvelteURL</h3>
 <ul>
-	<li><input type="text" bind:value={proxiedUrl.host} /> (Host)</li>
-	<li><input type="text" bind:value={proxiedUrl.port} /> (Port)</li>
-	<li><input type="text" bind:value={proxiedUrl.pathname} /> (Path)</li>
+	<li>
+		<input type="text" bind:value={proxiedUrl.host} />
+		 (Host)
+	</li>
+	<li>
+		<input type="text" bind:value={proxiedUrl.port} />
+		 (Port)
+	</li>
+	<li>
+		<input type="text" bind:value={proxiedUrl.pathname} />
+		 (Path)
+	</li>
 </ul>
 
-<p>URL: <span class="font-bold">{proxiedUrl.toString()}</span></p>
+<p>
+	URL: <span class="font-bold">{proxiedUrl.toString()}</span>
+</p>
 
 <h3>SvelteDate</h3>
 
 <button onclick={() => proxiedDate.setHours(13) && proxiedDate.setMinutes(37)}>Set Time</button>
 
-<p>Current time: <span class="font-bold">{proxiedDate.toLocaleTimeString('de', {hour: '2-digit', minute:'2-digit'})}</span></p>
+<p>
+	Current time: <span class="font-bold">
+		{proxiedDate.toLocaleTimeString('de', { hour: '2-digit', minute: '2-digit' })}
+	</span>
+</p>
