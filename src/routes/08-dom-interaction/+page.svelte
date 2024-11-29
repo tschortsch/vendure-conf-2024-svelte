@@ -5,16 +5,15 @@
 	import { App } from './App.tsx';
 	import { createRoot } from 'react-dom/client';
 
-	let count = $state(0);
-
+	let countWithJQuery = $state(0);
 	let reactApp: HTMLDivElement;
 	let canvas: HTMLCanvasElement;
 
 	let stopDrawing: null | (() => void) = null;
 
 	onMount(() => {
-		// jquery
-		jQuery('.button').on('click', () => count++);
+		// jQuery
+		jQuery('.button').on('click', () => countWithJQuery++);
 
 		// confetti library
 		let confetti = new Confetti('confetti-demo');
@@ -84,7 +83,7 @@
 
 <h2>How about JQuery?</h2>
 <div>
-	<button class="button">Click Me {count}</button>
+	<button class="button">Count with jQuery: {countWithJQuery}</button>
 </div>
 
 <h2>Or some Confetti?</h2>

@@ -14,7 +14,7 @@
 	<li>Every dom element can have one or multiple actions applied</li>
 	<li>A action is a function with the element as first argument</li>
 </ul>
-<div class="area" use:myAction={'on'}>I change on click</div>
+<div class="area" use:myAction={'on'}>I change my color on click</div>
 
 <style>
 	.area {
