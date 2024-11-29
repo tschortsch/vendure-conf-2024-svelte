@@ -8,9 +8,12 @@
 		counter = counter + 1;
 	};
 
-	// Exposed child function
+	// Exposed child functions
 	export const exportedIncrement = () => {
 		increment();
+	};
+	export const exportedReset = () => {
+		counter = 0;
 	};
 </script>
 

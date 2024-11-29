@@ -1,5 +1,4 @@
 <script lang="ts">
-	import type { SvelteComponent } from 'svelte';
 	import Nested from './Nested.svelte';
 
 	// Svelte 4
@@ -7,15 +6,10 @@
 
 	// Svelte 5
 	let counter = $state(0);
-	let counterProp = $state(0);
-	let counterPropBind = $state(0);
-	let counterExportedIncrement = $state(0);
-
 	const increment = () => (counter = counter + 1);
-	const incrementCounterProp = () => (counterProp = counterProp + 1);
-	const incrementCounterPropBind = () => (counterPropBind = counterPropBind + 1);
+	const reset = () => (counter = 0);
 
-	let nestedComponent: null | SvelteComponent = null;
+	let nestedComponent: null | ReturnType<typeof Nested> = $state(null);
 </script>
 
 <h1 class="title-with-emoji">
@@ -27,30 +21,34 @@
 <section>
 	<p>🧀 Counter: {counter}</p>
 	<button onclick={increment}>Give me moaar!</button>
+	<button onclick={reset}>Reset</button>
 </section>
 
 <h2>Props</h2>
 <section>
-	<p>🧀 Counter as prop: {counterProp}</p>
-	<button onclick={incrementCounterProp}>Increment from Root</button>
+	<p>🧀 Counter as prop: {counter}</p>
+	<button onclick={increment}>Increment from Root</button>
+	<button onclick={reset}>Reset</button>
 
-	<Nested counter={counterProp} />
+	<Nested {counter} />
 </section>
 
 <h2>Props Two-way Binding</h2>
 <section>
-	<p>🧀 Counter as prop with bind: {counterPropBind}</p>
-	<button onclick={incrementCounterPropBind}>Increment from Root</button>
+	<p>🧀 Counter as prop with bind: {counter}</p>
+	<button onclick={increment}>Increment from Root</button>
+	<button onclick={reset}>Reset</button>
 
-	<Nested bind:counter={counterPropBind} />
+	<Nested bind:counter />
 </section>
 
 <h2>Expose child functions</h2>
 <section>
-	<p>🧀 Counter: {counterExportedIncrement}</p>
-	<button onclick={() => nestedComponent?.exportedIncrement()}>
+	<p>🧀 Counter: {counter}</p>
+	<button onclick={nestedComponent?.exportedIncrement}>
 		Increment in nested component from Root
 	</button>
+	<button onclick={nestedComponent?.exportedReset}>Reset in nested component from Root</button>
 
-	<Nested counter={counterExportedIncrement} bind:this={nestedComponent} />
+	<Nested {counter} bind:this={nestedComponent} />
 </section>
