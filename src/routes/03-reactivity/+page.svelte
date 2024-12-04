@@ -45,10 +45,10 @@
 <h2>Expose child functions</h2>
 <section>
 	<p>🧀 Counter: {counter}</p>
-	<button onclick={nestedComponent?.exportedIncrement}>
+	<button onclick={() => nestedComponent?.exportedIncrement()}>
 		Increment in nested component from Root
 	</button>
-	<button onclick={nestedComponent?.exportedReset}>Reset in nested component from Root</button>
+	<button onclick={() => nestedComponent?.exportedReset()}>Reset in nested component from Root</button>
 
 	<Nested {counter} bind:this={nestedComponent} />
 </section>
